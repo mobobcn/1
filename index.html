@@ -1,1 +1,655 @@
-hello mobob
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="디지털에이전시 백호 디자인 스튜디오 baekho">
+	<meta name="url" >
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Baekho">
+	<meta property="og:description" content="디지털에이전시 백호 디자인 스튜디오 baekho">
+	<meta property="og:image" content="대표이미지주소(full_url):관리자등록권장/이미지크기(1200x630px)">
+	<meta property="og:url" >
+	
+	
+	<meta name="naver-site-verification" content="8c39baa6fcf9faedbe388a8016c61ba1bea28dfb" />
+
+	<!-- google analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="static/js/8a299bcd9b7447ddb5441bd0200b656e.js">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-196862072-1');
+</script>
+
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="static/css/4037666fb8a6447893578125e0e512a2.css"
+    rel="stylesheet">
+    <link href='static/css/spoqahansans-kr.css' rel='stylesheet' type='text/css'>
+  <link type="text/css" rel="stylesheet" href="static/css/reset.css" />
+  <link type="text/css" rel="stylesheet" href="static/css/common.css" />
+  <link type="text/css" rel="stylesheet" href="static/css/index.css" />
+  <link type="text/css" rel="stylesheet" href="static/css/sub.css" />
+  <link type="text/css" rel="stylesheet" href="static/css/slick.min.css" />
+  <link type="text/css" rel="stylesheet" media="screen and (max-width: 1199px)" href="static/css/index.m.css" />
+  <link type="text/css" rel="stylesheet" media="screen and (max-width: 1199px)" href="static/css/sub.m.css" />
+  <script src="static/js/jquery-3.4.1.js"></script>
+  <script src="static/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="static/js/slick.min.js"></script>
+  <script type="text/javascript" src="static/js/common.js"></script>
+  <script type="text/javascript" src="static/js/jquery.waypoints.min.js"></script>
+  <script type="text/javascript" src="static/js/header.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="quick__contact">
+  <img src="static/picture/quick_btn.svg" alt="">
+</div>
+
+<div class="quick__form">
+  <div class="form__top">
+    간편문의하기
+    <div class="form__close">
+      <img src="static/picture/close.png" alt="">
+    </div>
+  </div>
+  <div class="form__wrap">
+    <form name="inquiryForm" method="post" action="inquiry_ok.php" enctype="multipart/form-data">
+	<input type="hidden" name="return_url" value="/index.php">
+	<select name="service">
+      <option value="">서비스를 선택해주세요.</option>
+	  	<option value="Branding">Branding</option>
+		<option value="Website">Website</option>
+		<option value="Media">Media</option>
+		<option value="Photo">Photo</option>
+		<option value="Etc">Etc</option>
+		<option value="정부지원사업">정부지원사업</option>
+	    </select>
+    <input type="text" name="name" placeholder="이름/업체명">
+    <input type="text" name="tel" placeholder="전화번호">
+    <input type="text" name="email" placeholder="이메일">
+    <textarea name="content" placeholder="프로젝트에 대해 입력해주세요."></textarea>
+    <div class="form__chk">
+      <input type="checkbox" id="agree" name="agree">
+      <label for="agree">개인정보 수집 및 이용에 동의</label>
+    </div>
+    <p class="form__tel">TEL. 02-6954-0897</p>
+    <button type="button" class="form__btn" onClick="inquiryWrite();">지금 견적 받기</button>
+	</form>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function inquiryWrite(){
+	var form = document.inquiryForm;
+	if(form.service.value==""){
+		alert("서비스를 선택해주세요.");
+		return;
+	} else if(form.name.value==""){
+		alert("이름/업체명을 입력해주세요.");
+		form.name.focus();
+	} else if(form.tel.value==""){
+		alert("전화번호를 입력해주세요.");
+		form.tel.focus();
+	} else if(form.email.value==""){
+		alert("이메일을 입력해주세요.");
+		form.email.focus();
+	} else if(form.content.value==""){
+		alert("프로젝트에 대해 입력해주세요.");
+		form.content.focus();
+	} else if(!form.agree.checked){
+		alert("개인정보 수집 및 이용에 동의해주세요.");
+		form.agree.focus();
+	} else {
+		form.submit();
+	}
+  }
+
+</script>    <header class="header">
+      <div class="header__inner">
+        <a href="/" class="header__logo  main "><img src="static/picture/logo.png" alt=""></a>
+
+        <nav class="header__nav">
+          <a href="./about.php" class="">About</a>
+          <a href="./work.php" class="">Work</a>
+          <a href="./service.php" class="">Service</a>
+          <a href="./contact.php" class="">Contact</a>
+
+
+          <div class="hiding-default showing-1200px">
+            <ul class="nav__info">
+              <li>
+                <p class="para01">Office</p>
+                <p class="para02">
+                  서울시 강서구 마곡서로 56 9층 907호 백호 디자인 스튜디오<br>(마곡에스비타워 3차)
+                </p>
+              </li>
+
+              <li>
+                <p class="para01">Contact us</p>
+                <p class="para02">
+               
+                </p>
+              </li>
+            </ul>
+
+            <p class="nav__copy">&copy; Baekho design studio All Right Reserved.</p>
+          </div>
+        </nav>
+
+
+        <div class="header__hamburger hiding-default showing-1200px">
+          <div class="hamburger__btn">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+<div class="main-visual">
+	<div class="main-visual__txt">
+		<p class="txt01 animated">
+			We are full-service <br>
+			<span></span>
+		</p>
+
+		<p class="txt02 animated delay-03s">
+			11111111
+		</p>
+	</div>
+	<div class="main-visual__img"></div>
+</div>
+
+<section class="section01 inner">
+	<p class="main__title01 animated">WHAT WE DO</p>
+	<p class="main__title02 animated">
+		클라이언트의 성공은 <br>
+		우리의 성공입니다<span class="dot">.</span>
+	</p>
+
+	<p class="main__title03 animated">
+		우리는 비즈니스에 필요한 감성요소를 물리적 형태의 결과물로 나타냅니다. <br>
+		브랜드의 스토리가 완성되면 디자인과 영상을 통해 다채롭게 표현하며.<br>
+		백호 만의 기획과 공감할 수 밖에 없는 결과물을 통해서 <br>
+		여러분의 브랜드는 한 층 견고해 질 것입니다.<br>
+	</p>
+
+	<div class="list--style01 animated">
+		<a href="http://www.bhstudio.co.kr/work.php">
+			<p>Website<span class="dot">.</span></p>
+			<ul>
+				<li>홈페이지 제작</li>
+				<li>반응형 홈페이지</li>
+				<li>쇼핑몰 제작</li>
+				<li>홈페이지 유지보수</li>
+				<li>웹 호스팅</li>
+			</ul>
+		</a>
+
+		<a href="http://www.bhstudio.co.kr/work.php">
+			<p>Branding<span class="dot">.</span></p>
+			<ul>
+				<li>컨설팅 / 네이밍</li>
+				<li>슬로건 / 스토리텔링</li>
+				<li>BI.CI / Package</li>
+				<li>광고 / 인쇄물</li>
+			</ul>
+		</a>
+
+		<a href="http://www.bhstudio.co.kr/work.php">
+			<p>Media<span class="dot">.</span></p>
+			<ul>
+				<li>기업 / 제품 / 브랜드 홍보영상</li>
+				<li>CF 광고 영상</li>
+				<li>바이럴 영상, 항공촬영</li>
+				<li>영상 편집</li>
+			</ul>
+		</a>
+
+		<a href="http://www.bhstudio.co.kr/work.php">
+			<p>Photo<span class="dot">.</span></p>
+			<ul>
+				<li>제품촬영</li>
+				<li>모델촬영</li>
+				<li>기업 / 홍보 촬영</li>
+				<li>제품 상세 컨텐츠 촬영</li>
+			</ul>
+		</a>
+
+		<a href="http://www.bhstudio.co.kr/work.php">
+			<p>ETC<span class="dot">.</span></p>
+			<ul>
+				<li>상세 페이지 작업</li>
+				<li>사이트 운영 관리</li>
+			</ul>
+		</a>
+
+		<a href="http://www.bhstudio.co.kr/work.php">
+			<p>정부지원사업<span class="dot">.</span></p>
+			<ul>
+				<li>수출바우처</li>
+				<li>정부예산 지원사업</li>
+			</ul>
+		</a>
+	</div>
+</section>
+
+<section class="section02 inner">
+	<p class="main__title01 animated">OUR PROJECT</p>
+
+	<nav class="section02__nav animated">
+		<div class="nav__prev">
+			<img src="static/picture/prev01.png" alt="">
+		</div>
+		<div class="nav__next">
+			<img src="static/picture/next01.png" alt="">
+		</div>
+	</nav>
+
+	<div class="section02__list animated">
+				<a href="https://www.hi-five.kr/" target="_blank" class="items">
+			<div class="items__thumb">
+				<img src="static/picture/list_1620357155.jpg" alt="">
+			</div>
+			<div class="items__txt">
+				<p>하이파이브</p>
+				<p>Website<span class="dot">.</span></p>
+			</div>
+		</a>
+				<a href="http://gcc.unescoapceiu.org/html/index.html" target="_blank" class="items">
+			<div class="items__thumb">
+				<img src="static/picture/list_1620290033.jpg" alt="">
+			</div>
+			<div class="items__txt">
+				<p>유네스코 아태교육원</p>
+				<p>Website<span class="dot">.</span></p>
+			</div>
+		</a>
+				<a href="http://www.princessyachts.co.kr/html/main.html" target="_blank" class="items">
+			<div class="items__thumb">
+				<img src="static/picture/list_1620289949.jpg" alt="">
+			</div>
+			<div class="items__txt">
+				<p>프린세스요트</p>
+				<p>Website<span class="dot">.</span></p>
+			</div>
+		</a>
+				<a href="http://humansasglobalcitizens.org" target="_blank" class="items">
+			<div class="items__thumb">
+				<img src="static/picture/7b7dc99ea6c0460f93f7fe445c75dcef.gif" alt="">
+			</div>
+			<div class="items__txt">
+				<p>세계시민</p>
+				<p>Website<span class="dot">.</span></p>
+			</div>
+		</a>
+				<a href="http://sudam.or.kr/html/main.html" target="_blank" class="items">
+			<div class="items__thumb">
+				<img src="static/picture/55a8bf64d50e4fe4aa2a935b09840469.gif" alt="">
+			</div>
+			<div class="items__txt">
+				<p>수담</p>
+				<p>Website<span class="dot">.</span></p>
+			</div>
+		</a>
+		
+	</div>
+</section>
+
+<a href="http://bhstudio.bhdesign.kr/service.php" class="flow__banner">
+	<marquee>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+		<span>View More Work</span>
+	</marquee>
+</a>
+
+<script>
+	$(function () {
+		var section02List = $('.section02__list');
+		var section02Prev = $('.section02__nav .nav__prev');
+		var section02Next = $('.section02__nav .nav__next');
+
+		section02List.slick({
+			dots: false,
+			arrows: false,
+			infinite: true,
+			speed: 300,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			autoplay: false,
+			autoplaySpeed: 2000,
+			fade: false,
+			cssEase: 'linear',
+			slide: '.items',
+			responsive: [{
+				breakpoint: 769,
+				settings: {
+					slidesToShow: 3,
+				}
+			}, {
+				breakpoint: 641,
+				settings: {
+					slidesToShow: 1,
+					variableWidth: true
+				}
+			}]
+
+		})
+
+		section02Prev.on('click', function () {
+			section02List.slick('slickPrev')
+		})
+
+		section02Next.on('click', function () {
+			section02List.slick('slickNext')
+		})
+
+
+		// 메인비주얼 텍스트 애니메이션
+		var mvTxt = $(".main-visual .main-visual__txt .txt01 span");
+		var mvTxtAry = ["전문가들이 제안하는.", "기획,디자인,개발전문", "홈페이지의 목적", "당신을 이해합니다."];
+		var mvTxtCnt = 0;
+
+
+		// 문자열 입력 효과
+		function typeMorphing(mvTxtCnt) {
+			var txtSplit = mvTxtAry[mvTxtCnt].split("");
+			var txtCnt = 0;
+			var str = "";
+
+			var typeInterval = setInterval(function () {
+				str += txtSplit[txtCnt]
+
+				txtCnt++;
+
+				mvTxt.text(str);
+
+				if (txtCnt === txtSplit.length) {
+					clearInterval(typeInterval);
+					mvTxt.addClass("active");
+					setTimeout(function () {
+						deleteMorphing(str)
+					}, 2500)
+				}
+			}, 150)
+
+		}
+
+		// 문자열 제거 효과
+		function deleteMorphing(str) {
+			var txtSplit = str.split("");
+			var deleteStr = "";
+
+			mvTxt.removeClass("active");
+
+			var deleteInterval = setInterval(function () {
+				txtSplit.pop();
+				deleteStr = txtSplit.join("");
+				mvTxt.text(deleteStr);
+
+				if (txtSplit.length === 0) {
+					clearInterval(deleteInterval);
+
+					mvTxtCnt++;
+
+					if (mvTxtCnt === mvTxtAry.length) {
+						mvTxtCnt = 0;
+					}
+
+					setTimeout(function () {
+						typeMorphing(mvTxtCnt)
+					}, 700)
+				}
+			}, 50)
+		}
+
+
+		typeMorphing(mvTxtCnt);
+
+	})
+</script>
+
+
+<style type="text/css">
+table.popupTable { width:100%; height:100%; padding:0; margin:0; border:0; background:#fff; }
+.closeForm { position:relative; bottom:0px; width:100%; height:26px; background:#ddd; }
+.popMsg { position:absolute;left:10px;height:26px; line-height:26px; font-size:12px;  }
+.popClose { position:absolute; right:10px; bottom:1px; font-size:12px; color:#fff;  background:#666; width:40px; height:23px; line-height:23px; text-align:center; font-weight:bold; cursor:pointer;}
+</style>
+<footer class="inner">
+	<div class="footer__info animated">
+		<div class="">
+			<p>Contact</p>
+			<p>
+				TEL. 
+				
+			</p>
+		</div>
+		<div class="">
+			<p>Office</p>
+			<p>
+				
+			</p>
+		</div>
+	</div>
+	
+
+
+<!-- 네이버 애널리틱스 -->
+		<script type="text/javascript" src="static/js/wcslog.js"></script>
+		<script type="text/javascript">
+		if(!wcs_add) var wcs_add = {};
+		wcs_add["wa"] = "37f9896a639c80";
+		if(window.wcs) {
+		  wcs_do();
+			}
+		</script>
+
+
+	<div class="footer__contact animated">
+	<form name="writeForm" method="post" action="contact_ok.php" enctype="multipart/form-data">
+	<input type="hidden" name="service" id="service" style="background:#000;">
+	<input type="hidden" name="return_url" value="/index.php">
+		<p class="contact__para01">
+			프로젝트의 특징에 맞춰 맞춤형 컨설팅이 진행 됩니다. <span>가치와 경험을 받아보실수 있습니다.</span>
+		</p>
+
+		<p class="contact__para02">서비스를 선택해주세요 <span>(중복선택 가능)</span></p>
+		<ul class="contact__chk">
+						<li>
+				<input type="checkbox" id="service01" name="service_arr" value="Branding">
+				<label for="service01">Branding.</label>
+			</li>
+						<li>
+				<input type="checkbox" id="service02" name="service_arr" value="Website">
+				<label for="service02">Website.</label>
+			</li>
+						<li>
+				<input type="checkbox" id="service03" name="service_arr" value="Media">
+				<label for="service03">Media.</label>
+			</li>
+						<li>
+				<input type="checkbox" id="service04" name="service_arr" value="Photo">
+				<label for="service04">Photo.</label>
+			</li>
+						<li>
+				<input type="checkbox" id="service05" name="service_arr" value="Etc">
+				<label for="service05">Etc.</label>
+			</li>
+						<li>
+				<input type="checkbox" id="service06" name="service_arr" value="정부지원사업">
+				<label for="service06">정부지원사업.</label>
+			</li>
+						li>
+				<input type="checkbox" id="service01" name="service_arr" value="Branding">
+				<label for="service01">Branding.</label>
+			</li>
+
+			<li>
+				<input type="checkbox" id="service02" name="service_arr" value="Website">
+				<label for="service02">Website.</label>
+			</li>
+
+			<li>
+				<input type="checkbox" id="service03" name="service_arr" value="Media">
+				<label for="service03">Media.</label>
+			</li>
+
+			<li>
+				<input type="checkbox" id="service04" name="service_arr" value="Photo">
+				<label for="service04">Photo.</label>
+			</li>
+
+			<li>
+				<input type="checkbox" id="service05" name="service_arr" value="Etc">
+				<label for="service05">Etc.</label>
+			</li>
+
+			<li>
+				<input type="checkbox" id="service06" name="service_arr" value="정부지원사업">
+				<label for="service06">정부지원사업.</label>
+			</li
+		</ul>
+		<p class="contact__para02 mb0">정보를 입력해주세요.</p>
+		<div class="contact__form">
+			<div>
+				<p>회사 / 단체</p>
+				<input type="text" name="company">
+			</div>
+			<div>
+				<p>의뢰자명</p>
+				<input type="text" name="name">
+			</div>
+			<div>
+				<p>이메일</p>
+				<input type="text" name="email">
+			</div>
+			<div>
+				<p>전화번호</p>
+				<input type="text" name="tel">
+			</div>
+			<select name="budget">
+				<option selected readonly>예산을 선택해주세요 (만원)</option>
+							<option value="~ 1000(만원)">~ 1000(만원)</option>
+						<option value="1000 ~ 2000(만원)">1000 ~ 2000(만원)</option>
+						<option value="2000 ~ 3000(만원)">2000 ~ 3000(만원)</option>
+						<option value="3000 ~ 4000(만원)">3000 ~ 4000(만원)</option>
+						<option value="4000 ~ 5000(만원)">4000 ~ 5000(만원)</option>
+						<option value="5000 이상">5000 이상</option>
+						<option value="기타">기타</option>
+						</select>
+			<textarea name="content" placeholder="프로젝트에 대해 입력해주세요."></textarea>
+			<div class="form__file">
+				<input type="file" id="file" name="contact_file">
+				<label for="file">파일첨부</label>
+				<span id="fileName"></span>
+				<span>파일당 최대 10MB의 용량 제한이 있습니다.</span>
+			</div>
+			<div class="form__chk">
+				<input type="checkbox" id="agree" name="agree">
+				<label for="agree">개인정보 수집 및 이용에 동의</label>
+			</div>
+
+			<a href="javascript:contactWrite();">지금 견적 받기</a>
+		</div>
+		</form>
+	</div>
+   
+	<div class="footer__copy">
+		<p>&copy; Baekho design studio All Right Reseved.</p>
+		<a href="/private.php">개인정보 처리방침</a>
+	</div>
+</footer>
+</div>
+
+<script type="text/javascript">
+
+$(function(){
+    $('input[type=file]').on('change',function(){
+       
+	   // 첨부파일 파일명
+	   var filename = $(this).val().split('/').pop().split('\\').pop();
+        $(this).siblings('#fileName').text(filename);
+
+		// 첨부파일 용량 체크            
+		var fileSize = this.files[0].size;            
+		var maxSize = 1024 * 1024 * 10;
+		if(fileSize > maxSize){                
+			alert("파일용량 10MB을 초과했습니다.");                
+			$(this).val(""); 
+			$(this).siblings('#fileName').text('');
+		} 
+
+     });
+ });
+
+// 작성
+  function contactWrite(){
+	var form = document.writeForm;
+	check_sum(form.service_arr,form.service);
+	if(form.service.value==""){
+		alert("서비스를 선택해주세요.");
+		return;
+	} else if(form.company.value==""){
+		alert("회사/단체명을 입력해주세요.");
+		form.company.focus();
+	} else if(form.name.value==""){
+		alert("의뢰자명을 입력해주세요.");
+		form.name.focus();
+	} else if(form.email.value==""){
+		alert("이메일을 입력해주세요.");
+		form.email.focus();
+	} else if(form.tel.value==""){
+		alert("전화번호를 입력해주세요.");
+		form.tel.focus();
+	} else if(form.content.value==""){
+		alert("프로젝트에 대해 입력해주세요.");
+		form.content.focus();
+	} else if(!form.agree.checked){
+		alert("개인정보 수집 및 이용에 동의해주세요.");
+		form.agree.focus();
+	} else if(form.service.value==""){
+		alert("서비스를 선택해주세요.");
+		return;
+	} else {
+		form.submit();
+	}
+  }
+
+  function check_sum(arr, e){
+		var sum_str = "";
+		for(var i=0; i<arr.length; i++){
+			if(arr[i].checked == true){
+				if(sum_str){ sum_str += ","; }
+				sum_str += arr[i].value;
+			}
+		}
+		e.value = sum_str;
+	}
+</script>
+</body>
+
+</html>
